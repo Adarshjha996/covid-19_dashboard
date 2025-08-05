@@ -1,0 +1,60 @@
+# Create a presentation object
+prs = Presentation()
+
+# Define slide layout indexes
+TITLE_SLIDE_LAYOUT = 0
+CONTENT_SLIDE_LAYOUT = 1
+TITLE_ONLY_LAYOUT = 5
+
+# Slide 1: Title Slide
+slide = prs.slides.add_slide(prs.slide_layouts[TITLE_SLIDE_LAYOUT])
+slide.shapes.title.text = "COVID-19 Global Case Tracker Dashboard"
+slide.placeholders[1].text = "A project to visualize and analyze COVID-19 case trends globally"
+
+# Slide 2: Project Overview
+slide = prs.slides.add_slide(prs.slide_layouts[CONTENT_SLIDE_LAYOUT])
+slide.shapes.title.text = "Project Overview"
+slide.placeholders[1].text = (
+    "• Interactive dashboard to monitor global COVID-19 trends\n"
+    "• Visualizes confirmed cases, deaths, and recoveries\n"
+    "• Helps inform public health decisions and analysis"
+)
+
+# Slide 3: Dashboard Components
+slide = prs.slides.add_slide(prs.slide_layouts[CONTENT_SLIDE_LAYOUT])
+slide.shapes.title.text = "Dashboard Components"
+slide.placeholders[1].text = (
+    "• Line Chart: Daily confirmed COVID-19 cases\n"
+    "• Bar Chart: Total confirmed cases by country\n"
+    "• Pie Chart: Recovery vs Death rate"
+)
+
+# Slide 4: Workflow Diagram Placeholder
+slide = prs.slides.add_slide(prs.slide_layouts[TITLE_ONLY_LAYOUT])
+slide.shapes.title.text = "Project Workflow"
+shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(1), Inches(1.5), Inches(8), Inches(4))
+shape.text = "Workflow Diagram Placeholder\n(Data Collection ➝ Preprocessing ➝ Analysis ➝ Visualization ➝ Insights)"
+shape.text_frame.paragraphs[0].font.size = Pt(14)
+shape.fill.solid()
+shape.fill.fore_color.rgb = RGBColor(200, 200, 200)
+
+# Slide 5: Sample Visualizations Placeholder
+slide = prs.slides.add_slide(prs.slide_layouts[TITLE_ONLY_LAYOUT])
+slide.shapes.title.text = "Sample Visualizations"
+shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(1), Inches(1.5), Inches(8), Inches(4))
+shape.text = "Sample Chart Placeholders\n(Line Chart - Daily Cases | Bar Chart - Country Wise | Pie Chart - Recovery vs Death)"
+shape.text_frame.paragraphs[0].font.size = Pt(14)
+shape.fill.solid()
+shape.fill.fore_color.rgb = RGBColor(220, 230, 240)
+
+# Slide 6: Conclusion
+slide = prs.slides.add_slide(prs.slide_layouts[CONTENT_SLIDE_LAYOUT])
+slide.shapes.title.text = "Conclusion"
+slide.placeholders[1].text = (
+    "• Provides real-time insights into the pandemic\n"
+    "• Easy comparison between countries and trends\n"
+    "• Helps drive awareness and response efforts"
+)
+
+# Save the presentation
+prs.save("COVID19_Dashboard_Presentation.pptx")
