@@ -1,1 +1,1 @@
-# covid-19_dashboard
+COVID-19 Global Tracking Dashboard
