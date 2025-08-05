@@ -1,0 +1,26 @@
+#Project Description:
+*This project involves the development of an interactive data visualization dashboard to track and analyze global trends in COVID-19 cases, recoveries, and deaths. 
+*The dashboard will provide users with real-time insights into the pandemic's impact across different countries, enabling better understanding and decision-making.
+
+*Using reliable data sources (e.g., WHO, Johns Hopkins University), 
+the dashboard will feature multiple charts and visual elements to display the progression and distribution of COVID-19 metrics over time and across geographic regions.
+
+
+
+# Key Features:
+* Line Chart – Daily New Cases:
+* Displays the trend of daily confirmed COVID-19 cases globally or by selected countries.
+* Helps identify spikes, waves, and the overall direction of the pandemic.
+* Bar Chart – Total Cases by Country:
+* Compares total confirmed cases among countries.
+* Highlights the most and least affected regions.
+* Pie Chart – Recovery vs Death Rate:
+* Shows the proportion of recovered cases versus deaths from the total closed cases.
+* Offers insights into healthcare outcomes and system effectiveness.
+
+
+
+
+#Expected Outcome:
+* A user-friendly and visually appealing dashboard accessible via a web interface.
+* Real-time or regularly updated visualizations
